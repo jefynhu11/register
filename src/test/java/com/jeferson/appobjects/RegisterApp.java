@@ -27,4 +27,9 @@ public class RegisterApp {
     public WebElement phoneFieldText() {
         return driver.findElement(By.cssSelector("input[type='tel']"));
     }
+    public WebElement sexoMasculinoRadio() { return driver.findElement(By.cssSelector("input[type='radio'][value='Male']")); }
+    public WebElement sexoFemininoRadio() { return  driver.findElement(By.cssSelector("input[type='radio'][value='FeMale']")); }
+    public WebElement hobbiesGriloCheckBox() { return driver.findElement(By.id("checkbox1")); }
+    public WebElement hobbiesFilmesCheckBox() { return driver.findElement(By.id("checkbox2")); }
+    public WebElement hobbiesHoqueiCheckBox() { return driver.findElement(By.id("checkbox3")); }
 }
