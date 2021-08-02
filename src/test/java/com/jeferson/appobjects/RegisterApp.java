@@ -3,6 +3,7 @@ package com.jeferson.appobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class RegisterApp {
 
@@ -32,4 +33,6 @@ public class RegisterApp {
     public WebElement hobbiesGriloCheckBox() { return driver.findElement(By.id("checkbox1")); }
     public WebElement hobbiesFilmesCheckBox() { return driver.findElement(By.id("checkbox2")); }
     public WebElement hobbiesHoqueiCheckBox() { return driver.findElement(By.id("checkbox3")); }
+    public WebElement linguasSelect() { return driver.findElement(By.id("msdd")); }
+    public Select linguasSelects() { return  new Select(driver.findElement(By.id("msdd"))); }
 }
