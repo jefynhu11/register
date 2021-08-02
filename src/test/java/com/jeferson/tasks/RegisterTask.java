@@ -20,7 +20,13 @@ public class RegisterTask {
         registerApp.firstNameFieldText().sendKeys("Jeferson");
         registerApp.lastNameFieldText().sendKeys("Lopes");
         registerApp.addressTextArea().sendKeys("Teste de mensagem");
-
+        registerApp.emailFieldText().sendKeys("jefy@hotmail.com");
+        registerApp.phoneFieldText().sendKeys("987654321");
+        registerApp.sexoMasculinoRadio().click();
+        registerApp.hobbiesFilmesCheckBox().click();
+        registerApp.hobbiesHoqueiCheckBox().click();
+        registerApp.linguasSelect().click();
+//        registerApp.linguasSelects().selectByValue("árabe");
     }
 
 }
