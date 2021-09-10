@@ -25,8 +25,15 @@ public class RegisterTask {
         registerApp.sexoMasculinoRadio().click();
         registerApp.hobbiesFilmesCheckBox().click();
         registerApp.hobbiesHoqueiCheckBox().click();
-        registerApp.linguasSelect().click();
-//        registerApp.linguasSelects().selectByValue("árabe");
+        registerApp.languages().click();
+        registerApp.languagesOption("Dutch").click();
+        registerApp.languagesOption("Czech").click();
+        registerApp.skillsSelect().selectByValue("Android");
+        registerApp.countrySelect().selectByValue("Afghanistan");
+        registerApp.dateBirthYearSelect().selectByValue("1992");
+        registerApp.dateBirthMonthSelect().selectByValue("May");
+        registerApp.dateBirthDaySelect().selectByValue("3");
+
     }
 
 }
