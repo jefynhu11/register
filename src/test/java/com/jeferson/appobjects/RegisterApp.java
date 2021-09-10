@@ -33,6 +33,13 @@ public class RegisterApp {
     public WebElement hobbiesGriloCheckBox() { return driver.findElement(By.id("checkbox1")); }
     public WebElement hobbiesFilmesCheckBox() { return driver.findElement(By.id("checkbox2")); }
     public WebElement hobbiesHoqueiCheckBox() { return driver.findElement(By.id("checkbox3")); }
-    public WebElement linguasSelect() { return driver.findElement(By.id("msdd")); }
-    public Select linguasSelects() { return  new Select(driver.findElement(By.id("msdd"))); }
+    public WebElement languages() { return driver.findElement(By.id("msdd")); }
+    public WebElement languagesOption(String valor) {
+        return driver.findElement(By.xpath("//div[@id='msdd']//..//div//a[text()='"+valor+"']"));
+    }
+    public Select skillsSelect() { return  new Select(driver.findElement(By.id("Skills"))); }
+    public Select countrySelect() { return  new Select(driver.findElement(By.id("countries"))); }
+    public Select dateBirthYearSelect() { return  new Select(driver.findElement(By.id("yearbox"))); }
+    public Select dateBirthMonthSelect() { return  new Select(driver.findElement(By.cssSelector("select[placeholder='Month']"))); }
+    public Select dateBirthDaySelect() { return  new Select(driver.findElement(By.id("daybox"))); }
 }
