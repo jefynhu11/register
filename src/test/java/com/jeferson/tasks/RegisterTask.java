@@ -2,6 +2,7 @@ package com.jeferson.tasks;
 
 import com.jeferson.appobjects.RegisterApp;
 import com.jeferson.framework.tools.JsExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class RegisterTask {
@@ -16,7 +17,7 @@ public class RegisterTask {
         jsExecutor = new JsExecutor();
     }
 
-    public void cadastrarRegistar(){
+    public void cadastrarRegistar() throws InterruptedException {
         registerApp.firstNameFieldText().sendKeys("Jeferson");
         registerApp.lastNameFieldText().sendKeys("Lopes");
         registerApp.addressTextArea().sendKeys("Teste de mensagem");
@@ -30,9 +31,16 @@ public class RegisterTask {
         registerApp.languagesOption("Czech").click();
         registerApp.skillsSelect().selectByValue("Android");
         registerApp.countrySelect().selectByValue("Afghanistan");
+        /*Opção 1*/
+//        registerApp.selectCountrySelect().selectByVisibleText("Japan");
+        /*Opção 2*/
+        registerApp.selectCountryCheckBox().click();
+        registerApp.selectCountryFieldText().sendKeys("New"+ Keys.ENTER);
         registerApp.dateBirthYearSelect().selectByValue("1992");
         registerApp.dateBirthMonthSelect().selectByValue("May");
         registerApp.dateBirthDaySelect().selectByValue("3");
+        Thread.sleep(3000);
+
 
     }
 
