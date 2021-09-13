@@ -39,6 +39,13 @@ public class RegisterApp {
     }
     public Select skillsSelect() { return  new Select(driver.findElement(By.id("Skills"))); }
     public Select countrySelect() { return  new Select(driver.findElement(By.id("countries"))); }
+    public Select selectCountrySelect() { return  new Select(driver.findElement(By.id("country"))); }
+    public WebElement selectCountryCheckBox() {
+        return driver.findElement(By.className("select2-selection__arrow"));
+    }
+    public WebElement selectCountryFieldText() {
+        return driver.findElement(By.className("select2-search__field"));
+    }
     public Select dateBirthYearSelect() { return  new Select(driver.findElement(By.id("yearbox"))); }
     public Select dateBirthMonthSelect() { return  new Select(driver.findElement(By.cssSelector("select[placeholder='Month']"))); }
     public Select dateBirthDaySelect() { return  new Select(driver.findElement(By.id("daybox"))); }
